@@ -1,0 +1,109 @@
+<html>
+    
+    <meta charset="UTF-8">    
+    <link rel="stylesheet" href="styly.css">
+<head>
+    
+    <title>
+        Factoring
+    </title>
+     
+    <style>     
+        
+    </style>
+    
+</head>
+    
+<body>  
+        
+        <br><br>
+    
+        <center><h1 class = "texto"> Solve Quadratic Equations</h1></center>
+        <center><h4 class = "texto"> By Joshua Bougadis Y10</h4></center>
+    
+        <br><br>
+    
+        <center><div>
+        <label class = "texto" id = "label1">Enter the "a" value</label>
+        <input style="font-size:12px" id = "input1"  required minlength="1" maxlength="6" size="8">
+        </div></center>
+    
+        <br>
+
+        <center><div>
+        <label class = "texto" id = "label2">Enter the "b" value</label>
+        <input style="font-size:12px" id = "input2"  required minlength="1" maxlength="6" size="8">
+        </div></center>
+    
+        <br>
+    
+        <center><div>
+        <label class = "texto" id = "label3">Enter the "c" value</label>
+        <input style="font-size:12px" id = "input3"  required minlength="1" maxlength="6" size="8">
+        </div></center>
+    
+        <br>
+    
+        <center>
+        <input type="submit" onclick = "functiono()" id = "submit" value="Calculate!"></center>
+    
+        <br><br><br>
+    
+        <center><table>
+        <tr>
+        <td>
+        <center><h3 style = "" class = texto> The discriminant is: </h3></center>  
+        </td>
+        <td>
+         <center><h3 style = "" class = texto id = "texts1"></h3></center>   
+        </td>
+        </tr>
+        </table></center>
+    
+        <br>
+        
+        <center><table>
+        <tr>
+        <td>
+        <center><h3 style = "" class = texto> The first possible x value is: </h3></center>  
+        </td>
+        <td>
+         <center><h3 style = "" class = texto id = "texts2"></h3></center>   
+        </td>
+        </tr>
+        </table></center>
+    
+        <br>
+    
+        <center><table>
+        <tr>
+        <td>
+        <center><h3 style = "" class = texto> The second possible x value is: </h3></center>  
+        </td>
+        <td>
+         <center><h3 style = "" class = texto id = "texts3"></h3></center>   
+        </td>
+        </tr>
+        </table></center>
+    
+        <script>
+    
+       
+        function functiono(){
+            var a1 = document.getElementById("input1").value;
+            var b1 = document.getElementById("input2").value;
+            var c1 = document.getElementById("input3").value;
+            var discriminant = (Math.pow(b1,2) - (4*a1*c1));
+            document.getElementById("texts1").innerHTML = discriminant;
+            var result1 = (((-1*b1) + discriminant)/(2*a1));
+            document.getElementById("texts2").innerHTML = result1;
+            var result2 = (((-1*b1) - discriminant)/(2*a1));
+            document.getElementById("texts3").innerHTML = result2;
+        }
+
+    
+        </script>
+
+</body>
+
+</html>
